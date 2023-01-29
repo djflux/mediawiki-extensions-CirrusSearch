@@ -596,7 +596,7 @@ class Util {
 		// elasticsearch/elasticsearch endpoints
 		// It should be fine to remove this while we no longer support es6 which defaults this value
 		// to true.
-		$response = $index->requestEndpoint( ( new GetMapping() )->setParams( [ 'include_type_name' => 'false' ] ) );
+		$response = $index->requestEndpoint( ( new GetMapping() )->setParams( [ ] ) );
 		$data = $response->getData();
 		// $data is single element array with the backing index name as key
 		$mapping = array_shift( $data );

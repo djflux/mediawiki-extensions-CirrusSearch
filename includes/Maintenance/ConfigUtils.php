@@ -118,7 +118,7 @@ class ConfigUtils {
 	public function getAllIndicesByType( $typeName ) {
 		$response = $this->client->requestEndpoint( ( new Endpoints\Indices\Get() )
 			->setIndex( $typeName . '*' )
-			->setParams( [ 'include_type_name' => 'false' ] ) );
+			->setParams( [ ] ) );
 		if ( !$response->isOK() ) {
 			$this->fatalError( "Cannot fetch index names for $typeName: "
 				. $response->getError() );

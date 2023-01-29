@@ -88,7 +88,6 @@ class MappingValidator extends Validator {
 			try {
 				$action->send( $this->index, [
 					'master_timeout' => $this->masterTimeout,
-					'include_type_name' => 'false',
 				] );
 				$this->output( "corrected\n" );
 			} catch ( ExceptionInterface $e ) {

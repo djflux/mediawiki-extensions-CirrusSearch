@@ -548,7 +548,7 @@ class AnalysisConfigBuilder {
 												 // Not needed because of plain analysis.
 				],
 				'prefix_ngram_filter' => [
-					'type' => 'edgeNGram',
+					'type' => 'edge_ngram',
 					'max_gram' => CirrusSearch::MAX_TITLE_SEARCH,
 				],
 				'asciifolding' => [
@@ -574,14 +574,14 @@ class AnalysisConfigBuilder {
 			],
 			'tokenizer' => [
 				'prefix' => [
-					'type' => 'edgeNGram',
+					'type' => 'edge_ngram',
 					'max_gram' => CirrusSearch::MAX_TITLE_SEARCH,
 				],
 				'no_splitting' => [ // Just grab the whole term.
 					'type' => 'keyword',
 				],
 				'trigram' => [
-					'type' => 'nGram',
+					'type' => 'ngram',
 					'min_gram' => 3,
 					'max_gram' => 3,
 				],

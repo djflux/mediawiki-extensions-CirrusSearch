@@ -198,7 +198,6 @@ class MetaStoreIndex {
 			$this->buildIndexConfiguration(),
 			[
 				'master_timeout' => $this->getMasterTimeout(),
-				// 'include_type_name' => 'false'
 			]
 		);
 		$this->log( " ok\n" );
